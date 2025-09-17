@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YourBrand — Excel & Data Entry Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#2f8f4a;
+      --green-dark:#236736;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f8faf9;
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(180deg,var(--green),var(--green-dark));display:grid;place-items:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:#111827;text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:40px 0}
+    .eyebrow{display:inline-block;background:rgba(47,143,74,0.08);color:var(--green);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h1{font-size:42px;line-height:1.05;margin:14px 0}
+    p.lead{color:var(--muted);margin:0 0 22px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 20px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--green);color:white}
+    .btn-ghost{background:transparent;border:2px solid #e6eef0;color:var(--green);font-weight:700}
+
+    /* Card with laptop mock */
+    .hero-card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 6px 20px rgba(15,23,42,0.06);display:flex;align-items:center;justify-content:center}
+    .mock-laptop{width:100%;max-width:380px}
+
+    /* Why choose */
+    .features{display:flex;gap:18px;margin:36px 0}
+    .feature{flex:1;background:white;padding:18px;border-radius:12px;border:1px solid #eef2f6;text-align:center}
+    .feature h4{margin:8px 0;color:#0f172a}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Packages */
+    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+    .pkg{background:white;padding:20px;border-radius:14px;border:1px solid #e6eef0}
+    .pkg h3{margin:0 0 8px}
+    .pkg .price{font-size:20px;font-weight:800;color:var(--green);margin:12px 0}
+    .pkg ul{padding-left:18px;color:var(--muted);margin:10px 0}
+
+    footer{margin:40px 0;padding:18px 0;border-top:1px solid #eef2f6;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .hero-card{order:-1}
+      .packages{grid-template-columns:1fr}
+      .features{flex-direction:column}
+    }
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+    .pill{background:#eefaf1;color:var(--green);padding:6px 10px;border-radius:999px;font-weight:700}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">EX</div>
+        <div>
+          <div style="font-weight:800">YourBrand</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:3px">Excel & Data Solutions</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#order">Order Now</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Fast • Accurate • Affordable</span>
+          <h1>Hire Expert Excel & Data Entry Professionals</h1>
+          <p class="lead">Get clean, error-free spreadsheets, insightful charts, and ready-to-use dashboards — delivered quickly so you can focus on growing your business.</p>
+          <div class="cta">
+            <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Upload Your Project</button>
+            <button class="btn btn-ghost" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">See Packages</button>
+          </div>
+
+          <div style="margin-top:26px;display:flex;gap:12px;align-items:center">
+            <div class="center" style="gap:10px">
+              <div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(180deg,var(--green),var(--green-dark));display:grid;place-items:center;color:white;font-weight:800">✓</div>
+              <div>
+                <div style="font-weight:700">100% Accuracy Guarantee</div>
+                <div class="muted" style="font-size:13px">Checks & verification included</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <!-- Simple laptop / spreadsheet SVG mockup -->
+          <svg class="mock-laptop" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+            <rect x="28" y="40" rx="18" ry="18" width="744" height="350" fill="#fff" stroke="#e6eef0" />
+            <rect x="48" y="64" width="700" height="260" rx="6" fill="#fafafa" />
+            <!-- spreadsheet header -->
+            <rect x="48" y="64" width="700" height="38" rx="6" fill="#2f8f4a" opacity="0.12" />
+            <!-- rows -->
+            <g fill="#e9f3ec">
+              <rect x="60" y="116" width="640" height="18" rx="3" />
+              <rect x="60" y="140" width="640" height="18" rx="3" />
+              <rect x="60" y="164" width="640" height="18" rx="3" />
+              <rect x="60" y="188" width="640" height="18" rx="3" />
+            </g>
+            <!-- left keyboard base -->
+            <rect x="0" y="420" width="800" height="80" fill="#f3f4f6" />
+            <rect x="160" y="432" width="480" height="12" rx="6" fill="#e6eef0" />
+            <!-- small chart image -->
+            <rect x="520" y="76" width="140" height="80" rx="6" fill="#fff" stroke="#e6eef0" />
+            <polyline points="540,140 560,120 580,130 600,100 620,110" fill="none" stroke="#2f8f4a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <div style="font-size:22px;font-weight:800;color:var(--green)">✔️ 100% Accuracy</div>
+          <h4>Verified Quality</h4>
+          <p>Manual checks and double verification for every project.</p>
+        </div>
+        <div class="feature">
+          <div style="font-size:22px;font-weight:800;color:var(--green)">⏱️ Fast Delivery</div>
+          <h4>Same Day Options</h4>
+          <p>Need urgent work? Choose express delivery at checkout.</p>
+        </div>
+        <div class="feature">
+          <div style="font-size:22px;font-weight:800;color:var(--green)">💰 Affordable</div>
+          <h4>Clear Pricing</h4>
+          <p>Simple tiered packages — no hidden fees.</p>
+        </div>
+      </section>
+
+      <section id="packages">
+        <h2 style="margin-bottom:8px">Choose a Package</h2>
+        <div class="packages">
+          <div class="pkg">
+            <h3>Basic</h3>
+            <div class="price">₹500</div>
+            <ul>
+              <li>Up to 200 rows</li>
+              <li>Formatting & cleanup</li>
+              <li>Delivery: 1 day</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Basic</button>
+          </div>
+
+          <div class="pkg">
+            <h3>Standard</h3>
+            <div class="price">₹1,500</div>
+            <ul>
+              <li>Data cleaning & charts</li>
+              <li>Excel / Google Sheets</li>
+              <li>Delivery: 2 days</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Standard</button>
+          </div>
+
+          <div class="pkg">
+            <h3>Premium</h3>
+            <div class="price">₹5,000</div>
+            <ul>
+              <li>Advanced analysis & dashboard</li>
+              <li>Multiple revisions</li>
+              <li>Delivery: 3 days</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Premium</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="order" style="margin-top:36px;padding:18px;background:linear-gradient(180deg,rgba(47,143,74,0.04),transparent);border-radius:12px">
+        <h2>Submit Your Project</h2>
+        <p class="muted">Upload your file and give a short description. We'll reply with a quote and delivery time.</p>
+        <form style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px" onsubmit="event.preventDefault();alert('Project submitted (demo) — integrate backend to accept uploads and payments)')">
+          <input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
+          <input placeholder="Email or WhatsApp number" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
+          <select style="padding:12px;border-radius:10px;border:1px solid #e6eef0" required>
+            <option value="">Select package</option>
+            <option>Basic — ₹500</option>
+            <option>Standard — ₹1,500</option>
+            <option>Premium — ₹5,000</option>
+          </select>
+          <input type="date" style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
+          <textarea placeholder="Short description of the work (example: convert scanned invoices to Excel, 120 rows)" style="grid-column:1/3;padding:12px;border-radius:10px;border:1px solid #e6eef0;min-height:110px"></textarea>
+          <div style="grid-column:1/3;display:flex;gap:10px;align-items:center">
+            <label style="padding:10px 12px;border-radius:10px;background:white;border:1px dashed #dfeaf0;cursor:pointer">Choose file
+              <input type="file" style="display:none" />
+            </label>
+            <button class="btn btn-primary" type="submit">Submit Project</button>
+            <div class="muted" style="font-size:13px">Or contact: <strong>+91 98XXXX XXXX</strong></div>
+          </div>
+        </form>
+      </section>
+
+      <section id="about" style="margin-top:28px">
+        <h2>About Us</h2>
+        <p class="muted">We are a small team of Excel experts who handle manual data entry, cleaning, and analysis. Over 100+ projects delivered for small businesses, accountants, and e-commerce sellers.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 YourBrand • Excel & Data Solutions • Made with ❤
+    </footer>
+  </div>
+</body>
+</html>
