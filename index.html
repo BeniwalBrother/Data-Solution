@@ -172,7 +172,57 @@
   <nav>
     <a href="#">Home</a>
     <a href="#">Services</a>
+    <h2 style="margin-bottom:8px">Choose a Package</h2>
+<div class="packages">
+<div class="pkg">
+<h3>Basic</h3>
+<div class="price">₹500</div>
+<ul>
+<li>Up to 200 rows</li>
+<li>Formatting & cleanup</li>
+<li>Delivery: 1 day</li>
+</ul>
+<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Basic</button>
+</div>
+
+
+<div class="pkg">
+<h3>Standard</h3>
+<div class="price">₹1,500</div>
+<ul>
+<li>Data cleaning & charts</li>
+<li>Excel / Google Sheets</li>
+<li>Delivery: 2 days</li>
+</ul>
+<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Standard</button>
+</div>
+
+
+<div class="pkg">
+<h3>Premium</h3>
+<div class="price">₹5,000</div>
+<ul>
+<li>Advanced analysis & dashboard</li>
+<li>Multiple revisions</li>
+<li>Delivery: 3 days</li>
+</ul>
+<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Premium</button>
+</div>
+</div>
+</section>
+    <section id="order" style="margin-top:36px;padding:18px;background:linear-gradient(180deg,rgba(47,143,74,0.04),transparent);border-radius:12px">
+<h2>Submit Your Project</h2>
+<p class="muted">Upload your file and give a short description. We'll reply with a quote and delivery time.</p>
+<form style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px" onsubmit="event.preventDefault();alert('Project submitted (demo) — integrate backend to accept uploads and payments)')">
+<input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
+<input placeholder="Email or WhatsApp number" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
+<select style="padding:12px;border-radius:10px;border:1px solid #e6eef0" required>
+<option value="">Select package</option>
+<option>Basic — ₹500</option>
+<option>Standard — ₹1,500</option>
+<option>Premium — ₹5,000</option>
     <a href="#">Order</a>
+    
     <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
