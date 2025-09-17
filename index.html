@@ -3,211 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Excel & Data Entry Services</title>
+  <title>Excel & Data Entry Services - YourBrand</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #0d6efd;
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    nav a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #e9f5ff;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    .btn {
-      background: #0d6efd;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .services {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 300px;
-      margin: 10px;
-      text-align: center;
-    }
-    footer {
-      background: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #bbb;
-      margin: 0 8px;
-      text-decoration: none;
-    }
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333;}
+    header {background-color: #0d6efd; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between;}
+    header .logo {font-size: 1.5rem; font-weight: bold;}
+    nav a {margin: 0 10px; color: white; text-decoration: none; font-weight: bold;}
+    nav a:hover {text-decoration: underline;}
+    .hero {text-align: center; padding: 60px 20px; background: #e9f5ff;}
+    .hero h1 {font-size: 2.5rem; margin-bottom: 20px;}
+    .hero p {font-size: 1.2rem; margin-bottom: 30px;}
+    .btn {background: #0d6efd; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block;}
+    .btn:hover {background: #0b5ed7;}
+    .services {display: flex; justify-content: space-around; flex-wrap: wrap; padding: 40px 20px;}
+    .card {background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; width: 300px; margin: 10px; text-align: center;}
+    .card h3 {margin-bottom: 10px;}
+    .about, .contact {padding: 40px 20px; background: #fff;}
+    .about h2, .contact h2 {text-align: center; margin-bottom: 20px;}
+    .about p, .contact p {max-width: 800px; margin: 10px auto; line-height: 1.6;}
+    footer {background: #222; color: #bbb; text-align: center; padding: 20px; margin-top: 40px;}
+    footer a {color: #bbb; margin: 0 8px; text-decoration: none;}
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Beniwal_Brother</div>
+  <div class="logo">YourBrand</div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <h2 style="margin-bottom:8px">Choose a Package</h2>
-<div class="packages">
-<div class="pkg">
-<h3>Basic</h3>
-<div class="price">₹500</div>
-<ul>
-<li>Up to 200 rows</li>
-<li>Formatting & cleanup</li>
-<li>Delivery: 1 day</li>
-</ul>
-<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Basic</button>
-</div>
-
-
-<div class="pkg">
-<h3>Standard</h3>
-<div class="price">₹1,500</div>
-<ul>
-<li>Data cleaning & charts</li>
-<li>Excel / Google Sheets</li>
-<li>Delivery: 2 days</li>
-</ul>
-<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Standard</button>
-</div>
-
-
-<div class="pkg">
-<h3>Premium</h3>
-<div class="price">₹5,000</div>
-<ul>
-<li>Advanced analysis & dashboard</li>
-<li>Multiple revisions</li>
-<li>Delivery: 3 days</li>
-</ul>
-<button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Premium</button>
-</div>
-</div>
-</section>
-    <section id="order" style="margin-top:36px;padding:18px;background:linear-gradient(180deg,rgba(47,143,74,0.04),transparent);border-radius:12px">
-<h2>Submit Your Project</h2>
-<p class="muted">Upload your file and give a short description. We'll reply with a quote and delivery time.</p>
-<form style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px" onsubmit="event.preventDefault();alert('Project submitted (demo) — integrate backend to accept uploads and payments)')">
-<input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
-<input placeholder="Email or WhatsApp number" required style="padding:12px;border-radius:10px;border:1px solid #e6eef0" />
-<select style="padding:12px;border-radius:10px;border:1px solid #e6eef0" required>
-<option value="">Select package</option>
-<option>Basic — ₹500</option>
-<option>Standard — ₹1,500</option>
-<option>Premium — ₹5,000</option>
-    <a href="#">Order</a>
-    
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#order">Order</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <h1>🚀 Hire Expert Excel & Data Entry Professionals</h1>
   <p>Fast • Accurate • Affordable</p>
-  <a href="https://wa.me/919587848488?text=Hi%20I%20want%20to%20order%20a%20data%20entry%20service" target="_blank" class="btn">Order on WhatsApp</a>
+  <a href="https://wa.me/919587848488?text=Hi%20I%20want%20to%20order%20a%20data%20entry%20service" target="_blank" class="btn">Order Now on WhatsApp</a>
 </section>
 
-<section class="services">
+<section class="services" id="services">
   <div class="card">
-    <h3>✅ 100% Accuracy Guarantee</h3>
-    <p>Your data will always be clean and error-free.</p>
+    <h3>Basic Plan</h3>
+    <p>✔ Data Entry up to 200 rows<br>✔ Formatting & Cleanup<br>✔ Delivery in 1 Day</p>
+    <a href="https://wa.me/919587848488?text=I%20want%20to%20order%20the%20Basic%20Plan" target="_blank" class="btn">Order Basic</a>
   </div>
   <div class="card">
-    <h3>✅ Fast Delivery</h3>
-    <p>Get your projects delivered within 24 hours.</p>
+    <h3>Standard Plan</h3>
+    <p>✔ Data Cleaning & Charts<br>✔ Excel / Google Sheets<br>✔ Delivery in 2 Days</p>
+    <a href="https://wa.me/919587848488?text=I%20want%20to%20order%20the%20Standard%20Plan" target="_blank" class="btn">Order Standard</a>
   </div>
   <div class="card">
-    <h3>✅ Affordable Packages</h3>
-    <p>Professional work at the best prices.</p>
+    <h3>Premium Plan</h3>
+    <p>✔ Advanced Analysis & Dashboard<br>✔ Multiple Revisions<br>✔ Delivery in 3 Days</p>
+    <a href="https://wa.me/919587848488?text=I%20want%20to%20order%20the%20Premium%20Plan" target="_blank" class="btn">Order Premium</a>
   </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>We are experts in Microsoft Excel, Data Typing, Data Entry, and Data Analysis. Our mission is to deliver fast, accurate, and professional data solutions that save you time and help you make better business decisions.</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Connect With Us</h2>
+  <p><strong>Address:</strong> Thar Emitra, Main bus station, Bherunda, Nagaur, Rajasthan - 341031</p>
+  <p><strong>Email:</strong> <a href="mailto:emitra.thar@gmail.com">emitra.thar@gmail.com</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919587848488" target="_blank">+91 9587848488</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Beniwal is Here | Trusted Excel & Data Solutions Provider</p>
+  <p>© 2025 YourBrand | Trusted Excel & Data Solutions Provider</p>
   <p>
-    <a href="#">Privacy Policy</a> |
-    <a href="#">Terms of Service</a> |
-    <a href="mailto:support@yourbrand.com">Email Us</a>
-  </p>
-</footer>
-
-</body>
-</html>
-    <a href="#">Services</a>
-    <a href="#">Order</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>🚀 Hire Expert Excel & Data Entry Professionals</h1>
-  <p>Fast • Accurate • Affordable</p>
-  <a href="https://wa.me/919587848488?text=Hi%20I%20want%20to%20order%20a%20data%20entry%20service" target="_blank" class="btn">Order on WhatsApp</a>
-</section>
-
-<section class="services">
-  <div class="card">
-    <h3>✅ 100% Accuracy Guarantee</h3>
-    <p>Your data will always be clean and error-free.</p>
-  </div>
-  <div class="card">
-    <h3>✅ Fast Delivery</h3>
-    <p>Get your projects delivered within 24 hours.</p>
-  </div>
-  <div class="card">
-    <h3>✅ Affordable Packages</h3>
-    <p>Professional work at the best prices.</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Beniwal is Here | Trusted Excel & Data Solutions Provider</p>
-  <p>
-    <a href="#">Privacy Policy</a> |
-    <a href="#">Terms of Service</a> |
-    <a href="mailto:support@yourbrand.com">Email Us</a>
+    <a href="#home">Home</a> |
+    <a href="#services">Services</a> |
+    <a href="#order">Order</a> |
+    <a href="#about">About</a> |
+    <a href="#contact">Contact</a>
   </p>
 </footer>
 
